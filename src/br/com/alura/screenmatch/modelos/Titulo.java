@@ -28,6 +28,14 @@ public class Titulo {
         return this.totalDeAvaliacoes;
     }
 
+    public double getSomaDasAvaliacao() {
+        return somaDasAvaliacao;
+    }
+
+    public void setSomaDasAvaliacao(double somaDasAvaliacao) {
+        this.somaDasAvaliacao = somaDasAvaliacao;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
