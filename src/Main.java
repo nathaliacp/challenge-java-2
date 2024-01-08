@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -51,5 +53,19 @@ public class Main {
         episodio.setSerie(friends);
         episodio.setTotalVisualizacoes(500);
         filtro.filtrar(episodio);
+
+        var filmeDaNathalia = new Filme();
+        filmeDaNathalia.setNome("A Princesa e o Sapo");
+        filmeDaNathalia.setAnoDeLancamento(2009);
+        filmeDaNathalia.avaliar(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+        listaDeFilmes.add(filmeDaNathalia);
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
+        System.out.println("Último filme: " + listaDeFilmes.getLast().getNome());
+        System.out.println("toString -> " + listaDeFilmes.get(0).toString());
     }
 }
